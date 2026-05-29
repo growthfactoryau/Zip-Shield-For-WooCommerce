@@ -1,0 +1,2 @@
+# Zip Shield For WooCommerce
+Zip Shield for WooCommerce is a modern WooCommerce compliance plugin that restricts product purchases based on ZIP/postal codes. Easily create advanced restriction rules for products and categories, automatically remove restricted items at checkout, and provide customers with custom compliance messages. Built with a scalable rule engine, WooCommerce Blocks compatibility, HPOS support, and a premium modern admin UI.
