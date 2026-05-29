@@ -1,0 +1,408 @@
+/**
+ * Zip Shield System Architecture Core UI
+ * Cleanroom SaaS Layout Engine Framework
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+.zs-admin-wrapper {
+    --zs-bg-primary: #f8fafc;
+    --zs-bg-card: #ffffff;
+    --zs-accent-rgb: 79, 70, 229;
+    --zs-accent: rgb(var(--zs-accent-rgb));
+    --zs-text-main: #0f172a;
+    --zs-text-muted: #64748b;
+    --zs-border-color: #e2e8f0;
+    --zs-radius-lg: 16px;
+    --zs-radius-md: 12px;
+    --zs-radius-sm: 8px;
+    --zs-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+    --zs-shadow-bento: 0 10px 25px -5px rgba(0, 0, 0, 0.01), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+
+    margin: 24px 24px 24px 0;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--zs-text-main);
+    max-width: 1400px;
+}
+
+.zs-admin-wrapper * {
+    box-sizing: border-box;
+}
+
+/* Layout Infrastructure */
+.zs-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--zs-bg-card);
+    border: 1px solid var(--zs-border-color);
+    border-radius: var(--zs-radius-lg);
+    padding: 16px 24px;
+    margin-bottom: 24px;
+}
+
+.zs-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.zs-logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--zs-radius-md);
+    background: rgba(var(--zs-accent-rgb), 0.08);
+    color: var(--zs-accent);
+}
+
+.zs-logo-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.zs-brand h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+}
+
+.zs-brand p {
+    margin: 0;
+    color: var(--zs-text-muted);
+    font-size: 13px;
+}
+
+.zs-pill-count {
+    background: #f1f5f9;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    color: #475569;
+}
+
+.zs-workspace {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.zs-panel {
+    background: var(--zs-bg-card);
+    border: 1px solid var(--zs-border-color);
+    border-radius: var(--zs-radius-lg);
+    padding: 28px;
+    box-shadow: var(--zs-shadow-bento);
+}
+
+.zs-panel-header {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zs-panel-header h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.zs-status-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.badge-new {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.badge-editing {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+/* Pure Native Interactive Controls Input Group */
+.zs-form-group {
+    margin-bottom: 18px;
+}
+
+.zs-form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.zs-admin-wrapper input[type="text"],
+.zs-admin-wrapper select,
+.zs-admin-wrapper textarea {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: var(--zs-radius-md);
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--zs-text-main);
+    background-color: #ffffff;
+}
+
+.zs-admin-wrapper input[type="text"]:focus,
+.zs-admin-wrapper select:focus,
+.zs-admin-wrapper textarea:focus {
+    border-color: var(--zs-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--zs-accent-rgb), 0.1);
+}
+
+/* Embedded Step 2 Cleanroom Checked Matrix Component */
+.zs-product-drilldown-scroller {
+    border: 1px solid #cbd5e1;
+    border-radius: var(--zs-radius-md);
+    background: #f8fafc;
+    padding: 12px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.zs-checkbox-matrix {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.zs-matrix-notice {
+    font-size: 13px;
+    color: var(--zs-text-muted);
+    text-align: center;
+    margin: 20px 0;
+}
+
+.zs-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--zs-radius-sm);
+    cursor: pointer;
+}
+
+.zs-checkbox-item:hover {
+    border-color: #cbd5e1;
+    background: #f1f5f9;
+}
+
+.zs-checkbox-item input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    accent-color: var(--zs-accent);
+}
+
+.zs-checkbox-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--zs-text-main);
+}
+
+/* Switch UI Track */
+.zs-switch-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f8fafc;
+    border: 1px solid var(--zs-border-color);
+    border-radius: var(--zs-radius-md);
+    padding: 12px 16px;
+    margin: 20px 0;
+}
+
+.zs-switch-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.zs-switch-toggle {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    display: inline-block;
+}
+
+.zs-switch-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.zs-switch-track {
+    position: absolute;
+    inset: 0;
+    background: #cbd5e1;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.zs-switch-track::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.zs-switch-toggle input:checked+.zs-switch-track {
+    background: var(--zs-accent);
+}
+
+.zs-switch-toggle input:checked+.zs-switch-track::before {
+    transform: translateX(18px);
+}
+
+/* Buttons & Matrix Lists */
+.zs-btn-primary {
+    background: var(--zs-accent);
+    color: #ffffff;
+    border: 1px solid var(--zs-accent);
+    padding: 12px 24px;
+    border-radius: var(--zs-radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.zs-btn-primary:hover {
+    background: #4338ca;
+}
+
+.zs-matrix-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.zs-matrix-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    border: 1px solid var(--zs-border-color);
+    border-radius: var(--zs-radius-md);
+    background: var(--zs-bg-card);
+    gap: 20px;
+}
+
+.zs-matrix-identity {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.zs-matrix-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: var(--zs-radius-sm);
+}
+
+.zs-matrix-icon-wrapper svg {
+    width: 16px;
+    height: 16px;
+}
+
+.type-allow {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.type-block {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.zs-matrix-details h3 {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.zs-matrix-meta-pills {
+    display: flex;
+    gap: 6px;
+}
+
+.zs-meta-tag {
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.zs-status-dot {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.state-active {
+    color: #137333;
+}
+
+.state-disabled {
+    color: #475569;
+}
+
+.zs-matrix-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.zs-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    color: var(--zs-text-muted);
+    text-decoration: none;
+}
+
+.zs-action-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.zs-action-btn:hover {
+    background: #f8fafc;
+    color: var(--zs-text-main);
+}
+
+.zs-action-btn.action-delete:hover {
+    color: #ef4444;
+    background: #fef2f2;
+}
+
+@media (max-width: 1200px) {
+    .zs-workspace {
+        grid-template-columns: 1fr;
+    }
+}
